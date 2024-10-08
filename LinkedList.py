@@ -95,7 +95,16 @@ l1=LinkedList()
 
 print('Welcome to the linked list program\n')
 while True:
-    choice=input('enter the operation to do \ninsert_at_start:2\ninsert_at_end:3\ndisplay:4\ndelete_at_end:5\ndelete_at_start:6\ndelete_at_position:7\nget_element:8\nget_length:9\nelse 1 to exit:1\n:')
+    print('exit:1')
+    print('insert_at_start:2')
+    print('insert_at_end:3')
+    print('display:4')
+    print('delete_at_end:5')
+    print('delete_at_start:6')
+    print('delete_at_position:7')
+    print('get_element:8')
+    print('get_length:9')
+    choice=input('enter the choice: ')
     if choice=='2':
         l1.insert_at_start(int(input('enter a number to insert: ')))
         
