@@ -27,12 +27,14 @@ class LinkedList:
         while temp!=None:
             print(temp.data,end='->')
             temp=temp.next
-        print('None\n')
+        print('None')
+        print()
 
     def delete_at_end(self):
         temp=self.head
         if not self.head:
-            print('List is empty/n')
+            print('List is empty')
+            print()
             return
         if temp.next==None:
             self.head=None
@@ -40,35 +42,43 @@ class LinkedList:
         while temp.next!=None:
             prev=temp
             temp=temp.next
-        print(temp.data,' is deleted for linkedlist/n')
+        print(temp.data,' is deleted for linkedlist')
+        print()
         prev.next=None
     
     def delete_at_start(self):
         if not self.head:
-            print('List is empty/n')
+            print('List is empty')
+            print()
             return
         temp=self.head
         self.head=temp.next
-        print(temp.data,' is deleted for linkedlist\n')
+        print(temp.data,' is deleted for linkedlist')
+        print()
     
     def delete_at_position(self, position):
         if not self.head:
-            print('List is empty\n')
+            print('List is empty')
+            print()
             return
         if position<=0:
-            print('Invalid position\n')
+            print('Invalid position')
+            print()
             return
         if position==1:
-            print(position,'th node is deleted for linkedlist that is: ',self.head.data,'\n')
+            print(position,'th node is deleted for linkedlist that is: ',self.head.data)
+            print()
             self.head=self.head.next
             return
         temp=self.head
-        for i in range(2,position+1):
+        for i in range(2,position):
             temp=temp.next
             if temp==None:
-                print('Position out of range\n')
+                print('Position out of range')
+                print()
                 return
-        print(position,'th node is deleted for linkedlist that is: ',temp.next.data,'\n')
+        print(position,'th node is deleted for linkedlist that is: ',temp.next.data,'')
+        print()
         temp.next=temp.next.next
         
     def get_element(self, index):
@@ -81,8 +91,10 @@ class LinkedList:
             count += 1
             current = current.next
         
-        raise IndexError("Index out of range")
-    
+        print("Index out of range")
+        print()
+        
+
     def len(self):
         count=0
         temp=self.head
