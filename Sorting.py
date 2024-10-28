@@ -42,32 +42,36 @@ def InsertionSort(arr):
     return arr,count
 
 while True:
-    # if 1=int(input('enter 1 if you want to do any sorting operation else enter 0:')):
-        print('Enter the numbers separated by comma, to sort in ascending order: ')
-        arr=list(map(int,input().split(",")))
+        
         print('Bubble sort:1')
         print('Selection sort:2')
         print('Insertion Sort:3')
+        print('Enter 0 to exit:')
         print('please enter your choice:')
         choice=int(input())
-        if choice==1:
-            sorted_arr,count=BubbleSort(arr)
-            print('Bubble sort')
-            print('sorted array:',sorted_arr)
-            print('number of steps:',count)
-            print()
-        elif choice==2:
-            sorted_arr,count=SelectionSort(arr)
-            print('Selection sort')
-            print('sorted array:',sorted_arr)
-            print('number of steps:',count)
-            print()
-        elif choice==3:
-            sorted_arr,count=InsertionSort(arr)
-            print('Insertion sort')
-            print('sorted array:',sorted_arr)
-            print('number of steps:',count)
-            print()
-    # else:
-    #     exit('thank you for visiting this')
+        if choice==0:
+            exit('Thank You!')
+        else:
+            print('Enter the numbers separated by comma, to sort in ascending order: ')
+            arr=list(map(int,input().split(",")))
+            if choice==1:
+                sorted_arr,count=BubbleSort(arr)
+                print('Bubble sort')
+                print('sorted array:',sorted_arr)
+                print('number of steps:',count)
+                print()
+            elif choice==2:
+                sorted_arr,count=SelectionSort(arr)
+                print('Selection sort')
+                print('sorted array:',sorted_arr)
+                print('number of steps:',count)
+                print()
+            elif choice==3:
+                sorted_arr,count=InsertionSort(arr)
+                print('Insertion sort')
+                print('sorted array:',sorted_arr)
+                print('number of steps:',count)
+                print()
+
+
 
